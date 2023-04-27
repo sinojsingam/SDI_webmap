@@ -1,0 +1,43 @@
+<html>
+    <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+    integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
+    crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+     integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
+     crossorigin=""></script>
+    <link rel="stylesheet" href="css/styles.css" />
+    <title>Web GIS</title>
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="banner">
+                <img src="img/banner.jpg" alt="indian ocean">
+            </div>
+            <div class="nav-wrapper">
+                <nav>
+                    <div class="button">
+                        <a href="index.html">Basic map</a>
+                    </div>
+                    <div class="button active">
+                        <a href="chloropleth.html">Chloropleth</a>
+                    </div>
+                    <div class="button">
+                        <a href="heatmap.html">Heatmap</a>
+                    </div>
+                </nav>
+            </div>
+            <div class="title">
+                <h1>WEB GIS application</h1>
+                <h2>Basic Map</h2>
+            </div>
+            <div class="padding"></div>
+            <div id="map"></div>
+            <script src="js/index.js"></script>
+            <footer>
+                <p>&copy Sinoj Singam, Tartu University, 2022</p>
+            </footer>
+        </div>
+    </body>
+</html>

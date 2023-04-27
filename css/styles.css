@@ -1,0 +1,89 @@
+.wrapper{
+    margin: auto;
+    width: 80%;
+    padding-top: 10px;
+    position: relative;
+    min-height: 100vh;
+}
+.banner{
+    width: 100%;
+    height: auto;
+    background-color: rgb(182, 55, 0);
+}
+.button{
+    padding: 0.2em;
+    padding-left: 0.8em;
+    padding-right: 0.8em;
+    
+}
+.button a{
+    color: rgb(78, 78, 78);
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    padding-left: 10em;
+    padding-right: 10em;
+}
+
+.nav-wrapper{
+    width: 100%;
+    margin: 0;
+    position: absolute;
+    background-color: rgb(220, 220, 220);
+}
+
+.active {
+    color: black;
+    text-decoration: dotted;
+    background-color: rgb(72, 72, 72);
+    
+}
+.active a{
+    color: aliceblue;
+}
+.title{
+    text-align: justify;
+    color: rgb(58, 58, 58);
+    margin-top: 2em;
+    margin-bottom: 2em;
+    padding: 0.3em;
+}
+.padding{
+    padding-left: 2%;
+    padding-right: 5%;
+}
+#map { 
+    height: 40%; 
+    width: 80%;
+    margin: 0 auto;
+}
+img{
+    width: 100%;
+    height: auto;
+}
+.active{
+    color: rgb(116, 42, 34);
+    text-decoration:none;
+    font-weight: bold;
+}
+
+footer{
+    position: absolute;
+    bottom: 0;
+    margin-top: 0.2em;
+    padding: 0.1em;
+    width: 100%;
+    color:rgb(211, 211, 211);
+    background-color: rgb(75, 75, 75);
+    text-align: center;
+}
+
+.button:hover {
+    background-color: rgb(72, 72, 72);
+    transition: all 0.3s ease-in;
+  }
+
+.button:hover a {
+    color: aliceblue;
+  }
