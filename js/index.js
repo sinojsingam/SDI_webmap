@@ -34,27 +34,28 @@ addDistrictsGeoJson('data/tartu_city_districts_edu.geojson')
 // polygon style
 function polygonStyle(feature) {
     return {
-    fillColor: '#c40000',
-    fillOpacity: 0,
+    fillColor: getColor(feature.properties.OBJECTID),
+    fillOpacity: 0.5,
     weight: 0.8,
     opacity: 3,
     color: '#c40000',
     }
    }
 
-function createCircle(feature, latlng) {
-    let options = {
-    radius: 5,
-    fillColor: 'red',
-    fillOpacity: 0.5,
-    color: 'red',
-    weight: 1,
-    opacity: 1,
+function getColor(property) {
+    switch (property) {
+    case 1:
+    return '#ff0000'
+    case 13:
+    return '#009933'
+    case 6:
+    return '#0000ff'
+    case 7:
+    return '#ff0066'
+    default:
+    return '#ffffff'
     }
-    return L.circleMarker(latlng, options)
-   }
-
-
+}
 
 async function addCelltowersGeoJson(url) {
     const response = await fetch(url)
@@ -67,3 +68,9 @@ async function addCelltowersGeoJson(url) {
 
 addCelltowersGeoJson('data/tartu_city_celltowers_edu.geojson')
 
+const btn = document.getElementById('default')
+
+btn.addEventListener("click", defaultZoom);
+    function defaultZoom() {
+    map.setView([58.373523, 26.716045], 12)
+}

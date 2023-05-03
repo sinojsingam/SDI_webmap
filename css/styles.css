@@ -29,9 +29,9 @@ nav{
 .nav-wrapper{
     width: 100%;
     margin: 0;
-    position: absolute;
     background-color: rgb(220, 220, 220);
 }
+
 
 .active {
     color: black;
@@ -43,21 +43,23 @@ nav{
     color: aliceblue;
 }
 .title{
-    text-align: justify;
+    text-align: center;
     color: rgb(58, 58, 58);
-    margin-top: 2em;
-    margin-bottom: 2em;
-    padding: 0.3em;
+    margin-top: 0.5em;
+    margin-bottom: 0.1em;
+    padding: 0.1em;
 }
 .padding{
     padding-left: 2%;
     padding-right: 5%;
 }
 #map { 
-    height: 40%; 
+    position: relative;
+    height: 80%; 
     width: 80%;
     margin: 0 auto;
 }
+
 img{
     width: 100%;
     height: auto;
@@ -69,9 +71,9 @@ img{
 }
 
 footer{
-    position: absolute;
+    position: relative;
     bottom: 0;
-    margin-top: 0.2em;
+    margin-top: 0.9em;
     padding: 0.1em;
     width: 100%;
     color:rgb(211, 211, 211);
@@ -82,8 +84,30 @@ footer{
 .button:hover {
     background-color: rgb(72, 72, 72);
     transition: all 0.3s ease-in;
+    cursor: pointer;
   }
 
 .button:hover a {
     color: aliceblue;
+}
+
+#default {
+    background-color: #93cf7a; /* Green */
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 0.2em;
+    margin-left: 5em;
+    margin-bottom: 0.5em;
+    border-radius: 5px;
+}
+
+#default:hover {
+    background-color: #697e5f;
+    transition: all 0.1s ease-in;
+    cursor: pointer;
   }
