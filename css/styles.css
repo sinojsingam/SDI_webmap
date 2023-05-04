@@ -126,4 +126,7 @@ footer{
         padding-left: 0.5em;
         padding-right: 0.5em;
     }
+    .title{font-size: 10px;}
+    footer{font-size: 8px;}
+
 }
