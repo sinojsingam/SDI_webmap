@@ -18,6 +18,7 @@
 }
 .button a{
     color: rgb(78, 78, 78);
+    text-decoration: none;
 }
 nav{
     display: flex;
@@ -92,9 +93,9 @@ footer{
 }
 
 #default {
-    background-color: #93cf7a; /* Green */
+    background-color: rgb(220, 220, 220);
     border: none;
-    color: white;
+    color: rgb(72, 72, 72);
     padding: 5px 10px;
     text-align: center;
     text-decoration: none;
@@ -102,12 +103,13 @@ footer{
     font-size: 16px;
     margin: 0.2em;
     margin-left: 5em;
-    margin-bottom: 0.5em;
+    margin-bottom: 0.8em;
     border-radius: 5px;
 }
 
 #default:hover {
-    background-color: #697e5f;
+    background-color: rgb(72, 72, 72);
+    color:rgb(220, 220, 220);
     transition: all 0.1s ease-in;
     cursor: pointer;
   }

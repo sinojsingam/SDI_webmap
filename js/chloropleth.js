@@ -14,14 +14,13 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 }).addTo(map);
 
-
 addGeoJson('data/tartu_city_districts_edu.geojson')
 // add geoJSON layer
 async function addGeoJson(url) {
  const response = await fetch(url)
  const data = await response.json()
  L.choropleth(data, {
- valueProperty: 'OBJECTID',
+ valueProperty: 'TOWERS',
  scale: ['#ffffff', '#ff9900'],
  steps: 5,
  mode: 'q', // q for quantile, e for equidistant
@@ -31,7 +30,7 @@ async function addGeoJson(url) {
  fillOpacity: 0.8,
  },
  onEachFeature: function (feature, layer) {
- layer.bindPopup('Value: ' + feature.properties.OBJECTID)
+ layer.bindPopup('NIMI: '+ feature.properties.NIMI + '<br>Number of Towers: ' + feature.properties.TOWERS)
  },
  }).addTo(map)
 }
@@ -39,6 +38,6 @@ async function addGeoJson(url) {
 const btn = document.getElementById('default')
 
 btn.addEventListener("click", defaultZoom);
-    function defaultZoom() {
+function defaultZoom() {
     map.setView([58.373523, 26.716045], 12)
-   }
+}
