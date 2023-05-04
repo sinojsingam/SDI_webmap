@@ -1,3 +1,4 @@
+//adding leaflet defaults
 var mapOptions = {
     center: [42.336004, -71.169212], //set center Lat/Long of your area of interest
     zoom: 16, //set initial zoom level
@@ -8,7 +9,7 @@ var mapOptions = {
 
 let map = L.map('map').setView([58.373523, 26.716045], 12)
 
-//Example of an externally called basemap
+//Externally called basemap
 L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 19,
     attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
@@ -30,11 +31,12 @@ async function addGeoJson(url) {
  fillOpacity: 0.8,
  },
  onEachFeature: function (feature, layer) {
- layer.bindPopup('District: '+ feature.properties.NIMI + '<br>Number of Towers: ' + feature.properties.TOWERS)
+ layer.bindPopup('<strong>District:</strong> '+ feature.properties.NIMI + '<br><strong>Number of Towers:</strong> ' + feature.properties.TOWERS)
  },
  }).addTo(map)
 }
 
+//default view button
 const btn = document.getElementById('default')
 
 btn.addEventListener("click", defaultZoom);
